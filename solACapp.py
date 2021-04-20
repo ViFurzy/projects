@@ -124,8 +124,8 @@ class Toplevel1:
                     self.string = self.filename
             else:
                 #wyrzuć okno z napisem "W folderze nie istnieje AssettoCorsa.exe"
-                self.popupmsg("HALO EKIPA NIE DZIALA")
-                raise Exception('FUCK YOU')
+                self.popupmsg("It's not working m8!")
+                raise Exception('ERROR')
 
             self.SelectedGameFilePath.configure(text=self.string, background="green", foreground="#000000")
             self.ButtonDownloadAPP.configure(state=NORMAL)
@@ -147,9 +147,9 @@ class Toplevel1:
     def paramiko_connect(self, mode):
 
         paramiko.util.log_to_file("paramiko.log")
-        transport = paramiko.Transport('188.227.170.152', 22)
+        transport = paramiko.Transport('?', 22)
         # Auth
-        username, password = "Administrator", "SOLxAC2021!"
+        username, password = "?", "?"
         transport.connect(None, username, password)
         # Go!
         sftp = paramiko.SFTPClient.from_transport(transport)
